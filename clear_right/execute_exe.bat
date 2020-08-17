@@ -1,0 +1,1 @@
+start "" "dist/clear_right.exe"

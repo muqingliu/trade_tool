@@ -1,0 +1,17 @@
+main_merge_db功能：
+读取多个交易记录生成每日净值刷库sql语句
+
+机制：
+第一步：将本地文件下的*.xls、*.csv、*.xlsx文件及*.account文件复制到res\db文件夹下，*.xls、*.csv、*.xlsx文件一概更名为table1-N.xls系列文件，*.account文件不更名。
+第二步：调用code/php文件夹下stock_equity_pos_merge_db.php，读取res\db文件夹下的table1-N.xls系列文件和*.account文件，根据读取到的数据生成sql语句，更新fp_report_profit表，使用*.account文件文件名作为更新账号名，更新最近多少天由system.ini中的update_db_days字段决定。
+
+使用方法：将源*.xls、*.csv、*.xlsx文件及*.account文件和可执行文件main_merge_db.exe放在同一目录下，双击可执行文件，在生成的log文件夹下的web_sql-YYYY-MM-DD.log即是生成的sql语句。
+
+main_merge_web功能：
+读取多个交易记录文件生成净值曲线网页
+
+机制：
+第一步：将本地文件下的*.xls、*.csv、*.xlsx文件及*.account文件复制到res\db文件夹下，*.xls、*.csv、*.xlsx文件一概更名为table1-N.xls系列文件，*.account文件不更名。
+第二步：调用code/php文件夹下stock_equity_pos_merge_web.php，读取res\db文件夹下的table1-N.xls系列文件和*.account文件，根据读取到的数据生成净值曲线网页，使用*.account文件文件名作为网页名称。
+
+使用方法：将源*.xls、*.csv、*.xlsx文件及*.account文件和可执行文件main_merge_web.exe放在同一目录下，双击可执行文件，在可执行文件目录生成的*.htm文件即是生成的网页。

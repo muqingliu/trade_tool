@@ -1,0 +1,12 @@
+
+
+
+
+CON_BEGINTIME="2100"
+CON_ENDTIME="1515"
+
+CON_DOCNAME="Doc"
+
+
+
+

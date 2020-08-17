@@ -1,0 +1,7 @@
+使用方法：
+将保证金监控中心结算报表中的交易记录（包括第一行列名）拷出来，存成bill.txt形式。
+运行margin_center_translator.py，生成结果交易记录trade_records.db。
+
+配置文件：
+head_type.ini：结算报表中第一行列名对应索引
+symbol.ini：用以将结算报表中的大写合约名转化为正常合约名

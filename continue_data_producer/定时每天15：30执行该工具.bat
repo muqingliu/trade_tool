@@ -1,0 +1,1 @@
+SCHTASKS /Create /SC DAILY /TN continue_data_producer /TR E:\trader_work\tools\continue_data_producer\dist\continue_data_producer.exe /ST 15:30
